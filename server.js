@@ -41,10 +41,12 @@ const SPECIALITES_PATH = path.join(__dirname, 'data', 'specialites.json');
 const PRODUITS_PATH    = path.join(__dirname, 'data', 'produits.json');
 const UPLOADS_DIR      = path.join(__dirname, 'assets', 'img', 'galerie');
 const UPLOADS_SPEC_DIR = path.join(__dirname, 'assets', 'img', 'specialites');
+const UPLOADS_PROD_DIR = path.join(__dirname, 'assets', 'img', 'produits');
 
 // Crée les dossiers d'upload s'ils n'existent pas (nécessaire sur Render)
 fs.mkdirSync(UPLOADS_DIR,      { recursive: true });
 fs.mkdirSync(UPLOADS_SPEC_DIR, { recursive: true });
+fs.mkdirSync(UPLOADS_PROD_DIR, { recursive: true });
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function readGallery()     { return JSON.parse(fs.readFileSync(GALLERY_PATH,     'utf8')); }
@@ -361,6 +363,51 @@ app.delete('/api/admin/produits/:id', requireAuth, (req, res) => {
   const idx  = data.items.findIndex(i => i.id === id);
   if (idx === -1) return res.status(404).json({ error: 'Produit introuvable' });
   data.items.splice(idx, 1);
+  writeProduits(data);
+  res.json({ ok: true });
+});
+
+// ── Routes admin : Images produits ────────────────────────────────────────────
+const uploadProd = multer({
+  dest: UPLOADS_PROD_DIR,
+  limits: { fileSize: 5 * 1024 * 1024 },
+  fileFilter(_req, file, cb) { cb(null, ALLOWED_MIMES.has(file.mimetype)); }
+});
+
+app.post('/api/admin/produits/:id/image', requireAuth, (req, res) => {
+  uploadProd.single('image')(req, res, err => {
+    if (err || !req.file) return res.status(400).json({ error: err?.message || 'Fichier invalide (JPEG, PNG ou WebP, max 5 Mo)' });
+    const id  = parseInt(req.params.id, 10);
+    const ext = (path.extname(req.file.originalname) || '.jpg').toLowerCase();
+    const filename = `prod-${id}-${Date.now()}${ext}`;
+    const dest = path.join(UPLOADS_PROD_DIR, filename);
+    fs.renameSync(req.file.path, dest);
+
+    const data = readProduits();
+    const item = data.items.find(i => i.id === id);
+    if (!item) { fs.unlinkSync(dest); return res.status(404).json({ error: 'Produit introuvable' }); }
+
+    if (item.imageSrc && item.imageSrc.startsWith('/assets/img/produits/')) {
+      const old = path.join(__dirname, item.imageSrc.slice(1));
+      if (fs.existsSync(old)) fs.unlinkSync(old);
+    }
+    item.imageSrc = `/assets/img/produits/${filename}`;
+    writeProduits(data);
+    res.json({ ok: true, src: item.imageSrc });
+  });
+});
+
+app.delete('/api/admin/produits/:id/image', requireAuth, (req, res) => {
+  const id   = parseInt(req.params.id, 10);
+  const data = readProduits();
+  const item = data.items.find(i => i.id === id);
+  if (!item) return res.status(404).json({ error: 'Produit introuvable' });
+
+  if (item.imageSrc && item.imageSrc.startsWith('/assets/img/produits/')) {
+    const old = path.join(__dirname, item.imageSrc.slice(1));
+    if (fs.existsSync(old)) fs.unlinkSync(old);
+  }
+  item.imageSrc = null;
   writeProduits(data);
   res.json({ ok: true });
 });

@@ -68,7 +68,11 @@
 
     grid.innerHTML = visible.map(item => `
       <div class="product-card" data-cat="${esc(item.category)}">
-        <div class="product-card-img" aria-hidden="true">${esc(item.emoji)}</div>
+        <div class="product-card-img" aria-hidden="true">${
+          item.imageSrc
+            ? `<img src="${esc(item.imageSrc)}" alt="${esc(item.name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">`
+            : esc(item.emoji)
+        }</div>
         <div class="product-card-body">
           <h4>${esc(item.name)}</h4>
           <p>${esc(item.description)}</p>

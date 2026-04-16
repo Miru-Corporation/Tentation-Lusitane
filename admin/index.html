@@ -197,7 +197,24 @@
     }
     .products-table td { padding: 10px 12px; border-bottom: 1px solid var(--beige-warm); background: var(--white); vertical-align: middle; }
     .products-table tr:hover td { background: var(--cream); }
+    .products-table .td-img   { width: 70px; }
     .products-table .td-emoji { width: 80px; }
+    .prod-img-wrap  { position: relative; width: 50px; height: 50px; }
+    .prod-img-thumb {
+      width: 50px; height: 50px; border-radius: 6px; border: 1.5px solid var(--beige-warm);
+      cursor: pointer; overflow: hidden; display: flex; align-items: center; justify-content: center;
+      background: var(--cream); transition: border-color var(--tr);
+    }
+    .prod-img-thumb:hover { border-color: var(--gold); }
+    .prod-img-thumb img   { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .prod-img-thumb.empty { font-size: 1.3rem; color: var(--text-light); }
+    .prod-img-remove {
+      position: absolute; top: -5px; right: -5px; background: var(--red); color: #fff;
+      border: none; border-radius: 50%; width: 18px; height: 18px; font-size: 11px;
+      cursor: pointer; display: none; align-items: center; justify-content: center; line-height: 1;
+      font-weight: 700;
+    }
+    .prod-img-wrap:hover .prod-img-remove { display: flex; }
     .products-table .td-cat   { width: 130px; }
     .products-table .td-price { width: 90px; }
     .products-table .td-vis   { width: 70px; text-align: center; }
@@ -316,6 +333,7 @@
         <table class="products-table" id="produitsTable">
           <thead>
             <tr>
+              <th class="td-img">Image</th>
               <th class="td-emoji">Icône</th>
               <th>Nom</th>
               <th>Description</th>
@@ -801,6 +819,7 @@ function buildProductRow(item) {
   const tr = document.createElement('tr');
   tr.dataset.id = item.id;
   tr.innerHTML = `
+    <td class="td-img"></td>
     <td class="td-emoji"></td>
     <td><input class="table-input row-name"  type="text" value="${esc(item.name)}"        maxlength="100" /></td>
     <td><input class="table-input row-desc"  type="text" value="${esc(item.description)}" maxlength="300" /></td>
@@ -811,6 +830,73 @@ function buildProductRow(item) {
       <button class="btn-primary btn-row-save" style="padding:7px 12px;font-size:.78rem;">Sauv.</button>
       <button class="btn-danger  btn-row-del"  style="margin-left:6px;">Suppr.</button>
     </td>`;
+
+  // ── Cellule image ──────────────────────────────────────────────────────────
+  const imgWrap   = document.createElement('div');
+  imgWrap.className = 'prod-img-wrap';
+
+  const imgThumb  = document.createElement('div');
+  imgThumb.className = 'prod-img-thumb' + (item.imageSrc ? '' : ' empty');
+  if (item.imageSrc) {
+    const img = document.createElement('img');
+    img.src = item.imageSrc;
+    imgThumb.appendChild(img);
+  } else {
+    imgThumb.textContent = '📷';
+  }
+
+  const removeBtn = document.createElement('button');
+  removeBtn.className = 'prod-img-remove';
+  removeBtn.title = 'Supprimer l\'image';
+  removeBtn.textContent = '×';
+  removeBtn.style.display = item.imageSrc ? 'flex' : 'none';
+
+  const fileInputImg = document.createElement('input');
+  fileInputImg.type = 'file';
+  fileInputImg.accept = 'image/jpeg,image/png,image/webp';
+  fileInputImg.style.display = 'none';
+
+  imgThumb.addEventListener('click', () => fileInputImg.click());
+
+  fileInputImg.addEventListener('change', async () => {
+    if (!fileInputImg.files[0]) return;
+    const fd = new FormData();
+    fd.append('image', fileInputImg.files[0]);
+    try {
+      const res = await fetch(`/api/admin/produits/${item.id}/image`, { method: 'POST', body: fd });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error);
+      item.imageSrc = json.src;
+      imgThumb.className = 'prod-img-thumb';
+      imgThumb.innerHTML = '';
+      const img = document.createElement('img');
+      img.src = json.src;
+      imgThumb.appendChild(img);
+      removeBtn.style.display = 'flex';
+      showToast('Image mise à jour !');
+    } catch(ex) { showToast(ex.message || 'Erreur upload', 'error'); }
+    fileInputImg.value = '';
+  });
+
+  removeBtn.addEventListener('click', async ev => {
+    ev.stopPropagation();
+    if (!confirm('Supprimer l\'image de ce produit ?')) return;
+    try {
+      const res = await fetch(`/api/admin/produits/${item.id}/image`, { method: 'DELETE' });
+      if (!res.ok) throw new Error((await res.json()).error);
+      item.imageSrc = null;
+      imgThumb.className = 'prod-img-thumb empty';
+      imgThumb.innerHTML = '';
+      imgThumb.textContent = '📷';
+      removeBtn.style.display = 'none';
+      showToast('Image supprimée');
+    } catch(ex) { showToast(ex.message || 'Erreur', 'error'); }
+  });
+
+  imgWrap.appendChild(imgThumb);
+  imgWrap.appendChild(removeBtn);
+  imgWrap.appendChild(fileInputImg);
+  tr.querySelector('.td-img').appendChild(imgWrap);
 
   tr.querySelector('.td-emoji').appendChild(createEmojiPicker(item.emoji));
 
