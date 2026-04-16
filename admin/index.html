@@ -144,7 +144,7 @@
     }
     .emoji-picker-trigger:hover { border-color: var(--gold); }
     .emoji-picker-grid {
-      position: absolute; top: calc(100% + 4px); left: 0; z-index: 300;
+      position: fixed; z-index: 9999;
       background: var(--white); border: 1.5px solid var(--beige-warm); border-radius: 12px;
       box-shadow: var(--shadow-md); padding: 10px; display: none;
       grid-template-columns: repeat(8, 1fr); gap: 4px; width: 292px;
@@ -733,6 +733,7 @@ function createEmojiPicker(initial) {
 
   const grid = document.createElement('div');
   grid.className = 'emoji-picker-grid';
+  document.body.appendChild(grid); // portal hors du tableau pour éviter le clip overflow
 
   FOOD_EMOJIS.forEach(group => {
     const lbl = document.createElement('div');
@@ -757,11 +758,14 @@ function createEmojiPicker(initial) {
     document.querySelectorAll('.emoji-picker-grid.open').forEach(g => {
       if (g !== grid) g.classList.remove('open');
     });
+    const rect = trigger.getBoundingClientRect();
+    grid.style.top  = (rect.bottom + 4) + 'px';
+    grid.style.left = rect.left + 'px';
     grid.classList.toggle('open');
   });
 
+  wrapper._emojiGrid = grid; // référence pour nettoyage à la suppression de ligne
   wrapper.appendChild(trigger);
-  wrapper.appendChild(grid);
   return wrapper;
 }
 
@@ -781,6 +785,7 @@ async function loadProduits() {
 
 function renderProduits() {
   const tbody = document.getElementById('produitsBody');
+  tbody.querySelectorAll('.emoji-picker').forEach(w => { if (w._emojiGrid) w._emojiGrid.remove(); });
   tbody.innerHTML = '';
   const sorted = [...produitsData.items].sort((a,b) => a.order - b.order);
   sorted.forEach(item => tbody.appendChild(buildProductRow(item)));
