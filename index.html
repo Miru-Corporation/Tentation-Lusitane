@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══════════════════════════════════════════
+       SEO META — TENTATION LUSITANE
+  ══════════════════════════════════════════ -->
+  <title>Tentation Lusitane – Boulangerie & Pâtisserie Portugaise à Clamart (92140)</title>
+  <meta name="description" content="Tentation Lusitane, boulangerie-pâtisserie artisanale portugaise à Clamart (92140). Pasteis de Nata, Bolo Rei, pains artisanaux, viennoiseries. 77 Avenue du Général de Gaulle. Ouvert 7j/7." />
+  <meta name="keywords" content="boulangerie Clamart, pâtisserie Clamart, boulangerie portugaise Clamart, pasteis de nata Clamart, pâtisserie artisanale Clamart, Tentation Lusitane, boulangerie 92140, pain artisanal Clamart" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Tentation Lusitane" />
+  <link rel="canonical" href="https://www.tentation-lusitane.fr/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tentation-lusitane.fr/" />
+  <meta property="og:title" content="Tentation Lusitane – Boulangerie & Pâtisserie Portugaise à Clamart" />
+  <meta property="og:description" content="Découvrez l'artisanat portugais au cœur de Clamart. Pasteis de Nata, pains, viennoiseries et douceurs maison. 77 Av. du Général de Gaulle, Clamart 92140." />
+  <meta property="og:image" content="https://www.tentation-lusitane.fr/og-image.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tentation Lusitane – Boulangerie Portugaise à Clamart" />
+  <meta name="twitter:description" content="Pasteis de Nata, pains artisanaux & douceurs portugaises. Venez nous rendre visite au 77 Av. du Général de Gaulle, Clamart." />
+
+  <!-- Schema.org Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Tentation Lusitane",
+    "description": "Boulangerie-pâtisserie artisanale spécialisée dans les spécialités portugaises à Clamart.",
+    "url": "https://www.tentation-lusitane.fr",
+    "telephone": "+33-1-XX-XX-XX-XX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "77 Avenue du Général de Gaulle",
+      "addressLocality": "Clamart",
+      "postalCode": "92140",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.7997,
+      "longitude": 2.2632
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"07:00","closes":"20:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"07:30","closes":"13:30"}
+    ],
+    "servesCuisine": ["Française","Portugaise"],
+    "priceRange": "€€",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "312"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts — performance preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ════════════════════════════════════════════
+       DESIGN TOKENS
+    ════════════════════════════════════════════ */
+    :root {
+      --gold:        #C8943A;
+      --gold-light:  #E8C47A;
+      --gold-dark:   #8B6220;
+      --brown:       #3D2B1F;
+      --brown-mid:   #6B4226;
+      --beige:       #F5ECD7;
+      --beige-warm:  #EFE0C0;
+      --cream:       #FDFAF4;
+      --white:       #FFFFFF;
+      --text-dark:   #2C1810;
+      --text-mid:    #5A3E2B;
+      --text-light:  #8C7B6B;
+      --shadow-sm:   0 2px 12px rgba(61,43,31,.10);
+      --shadow-md:   0 8px 32px rgba(61,43,31,.16);
+      --shadow-lg:   0 20px 60px rgba(61,43,31,.20);
+      --radius:      12px;
+      --radius-lg:   24px;
+      --transition:  .35s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ════════════════════════════════════════════
+       RESET & BASE
+    ════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a  { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ════════════════════════════════════════════
+       TYPOGRAPHY HELPERS
+    ════════════════════════════════════════════ */
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .text-gold   { color: var(--gold); }
+    .text-center { text-align: center; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.25;
+      color: var(--brown);
+    }
+
+    /* Section label (eyebrow) */
+    .eyebrow {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .75rem;
+    }
+
+    /* ════════════════════════════════════════════
+       LAYOUT
+    ════════════════════════════════════════════ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section { padding: 96px 0; }
+    .section--alt { background: var(--beige); }
+    .section--dark {
+      background: var(--brown);
+      color: var(--beige);
+    }
+    .section--dark h2, .section--dark h3 { color: var(--gold-light); }
+
+    /* Grid helpers */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+    /* ════════════════════════════════════════════
+       BUTTONS
+    ════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 36px;
+      border-radius: 50px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .06em;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn--primary {
+      background: var(--gold);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(200,148,58,.40);
+    }
+    .btn--primary:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200,148,58,.50);
+    }
+    .btn--outline {
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+    .btn--outline:hover {
+      background: var(--gold);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn--outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,.6);
+    }
+    .btn--outline-white:hover {
+      background: var(--white);
+      color: var(--brown);
+      border-color: var(--white);
+    }
+
+    /* ════════════════════════════════════════════
+       NAVBAR
+    ════════════════════════════════════════════ */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(253,250,244,.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 12px 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .nav-logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--white);
+      transition: color var(--transition);
+      letter-spacing: .02em;
+    }
+    .navbar.scrolled .nav-logo-main { color: var(--brown); }
+    .nav-logo-sub {
+      font-size: .65rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      transition: color var(--transition);
+    }
+    .navbar.scrolled .nav-logo-sub { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.88);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .navbar.scrolled .nav-links a { color: var(--text-mid); }
+    .navbar.scrolled .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: .8rem !important;
+      transition: background var(--transition), transform var(--transition) !important;
+    }
+    .nav-cta:hover { background: var(--gold-dark) !important; transform: translateY(-2px); }
+    .nav-cta::after { display: none !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .navbar.scrolled .hamburger span { background: var(--brown); }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--brown);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--beige);
+      transition: color var(--transition);
+    }
+    .mobile-nav a:hover { color: var(--gold-light); }
+    .mobile-nav-close {
+      position: absolute;
+      top: 24px; right: 24px;
+      font-size: 2rem;
+      color: var(--gold-light);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ════════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(160deg, rgba(61,43,31,.75) 0%, rgba(107,66,38,.55) 60%, rgba(200,148,58,.20) 100%),
+        /* Placeholder for hero image — replace with real photo */
+        url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1600&q=85') center/cover no-repeat;
+    }
+    /* Azulejo-style decorative overlay */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8943A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(200,148,58,.25);
+      border: 1px solid rgba(200,148,58,.5);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 28px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge span { font-size: 1.1em; }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      color: var(--white);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 20px rgba(0,0,0,.3);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,.85);
+      max-width: 560px;
+      margin-bottom: 44px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,.6);
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      animation: bounce 2.4s ease-in-out infinite;
+    }
+    .hero-scroll::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 44px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,.5));
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ════════════════════════════════════════════
+       TRUST BAR
+    ════════════════════════════════════════════ */
+    .trust-bar {
+      background: var(--brown);
+      padding: 22px 0;
+    }
+    .trust-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 40px;
+      border-right: 1px solid rgba(255,255,255,.12);
+      color: var(--beige-warm);
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-item-icon { font-size: 1.6rem; }
+    .trust-item-text strong {
+      display: block;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: var(--gold-light);
+    }
+    .trust-item-text span {
+      font-size: .72rem;
+      color: rgba(245,236,215,.65);
+    }
+
+    /* ════════════════════════════════════════════
+       ABOUT
+    ════════════════════════════════════════════ */
+    .about-image-wrap {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .about-image-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 2px solid var(--gold);
+      border-radius: calc(var(--radius-lg) + 12px);
+      opacity: .4;
+      z-index: 0;
+    }
+    .about-img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      position: relative;
+      z-index: 1;
+      /* Placeholder gradient while image loads */
+      background: linear-gradient(135deg, var(--beige-warm) 0%, var(--gold-light) 100%);
+    }
+    .about-badge-float {
+      position: absolute;
+      bottom: 28px;
+      right: -20px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+      text-align: center;
+    }
+    .about-badge-float .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .about-badge-float .label {
+      font-size: .75rem;
+      color: var(--text-light);
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .about-text { padding-left: 24px; }
+    .about-text h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      color: var(--text-mid);
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .about-feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--beige-warm);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .about-feature-text strong {
+      display: block;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 2px;
+    }
+    .about-feature-text span {
+      font-size: .8rem;
+      color: var(--text-light);
+    }
+
+    /* ════════════════════════════════════════════
+       SPECIALTIES (Portuguese Highlight)
+    ════════════════════════════════════════════ */
+    .specialties-header { margin-bottom: 64px; }
+    .specialties-header h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 16px; }
+    .specialties-header p { font-size: 1.05rem; color: var(--text-mid); max-width: 580px; margin: 0 auto; }
+
+    .specialty-card {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      cursor: default;
+    }
+    .specialty-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+    }
+    .specialty-card-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      background: linear-gradient(135deg, var(--beige-warm), var(--gold-light));
+      position: relative;
+      overflow: hidden;
+    }
+    .specialty-card-img .placeholder-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      opacity: .5;
+    }
+    .specialty-card-body { padding: 28px; }
+    .specialty-card-tag {
+      display: inline-block;
+      background: var(--beige-warm);
+      color: var(--gold-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .specialty-card-body h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .specialty-card-body p {
+      font-size: .9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .specialty-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .specialty-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .specialty-stars { color: var(--gold); font-size: .9rem; letter-spacing: 2px; }
+
+    /* ════════════════════════════════════════════
+       PRODUCTS GRID
+    ════════════════════════════════════════════ */
+    .products-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .tab-btn {
+      padding: 10px 24px;
+      border-radius: 50px;
+      border: 2px solid var(--beige-warm);
+      background: transparent;
+      color: var(--text-mid);
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: 'Lato', sans-serif;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .product-card-img {
+      height: 180px;
+      background: linear-gradient(135deg, var(--beige-warm), var(--beige));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .product-card-body { padding: 18px; }
+    .product-card-body h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .product-card-body p {
+      font-size: .82rem;
+      color: var(--text-light);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .product-card-price {
+      font-weight: 700;
+      color: var(--gold);
+      font-size: .95rem;
+    }
+
+    /* ════════════════════════════════════════════
+       GALLERY
+    ════════════════════════════════════════════ */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 260px);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item:first-child {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+    .gallery-item-bg {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform .6s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+    }
+    .gallery-item:hover .gallery-item-bg { transform: scale(1.08); }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(61,43,31,.5) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    /* Placeholder gallery colors */
+    .gal-1 { background: linear-gradient(135deg, #C8943A33, #8B622066); }
+    .gal-2 { background: linear-gradient(135deg, #F5ECD7, #E8C47A66); }
+    .gal-3 { background: linear-gradient(135deg, #3D2B1F22, #6B422644); }
+    .gal-4 { background: linear-gradient(135deg, #E8C47A44, #C8943A55); }
+    .gal-5 { background: linear-gradient(135deg, #F5ECD7, #EFE0C0); }
+
+    /* ════════════════════════════════════════════
+       REVIEWS
+    ════════════════════════════════════════════ */
+    .reviews-rating-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+    }
+    .rating-big {
+      text-align: center;
+    }
+    .rating-big .number {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .rating-big .stars { font-size: 1.4rem; color: var(--gold); letter-spacing: 4px; margin: 6px 0; }
+    .rating-big .count { font-size: .82rem; color: var(--text-light); }
+
+    .rating-divider {
+      width: 1px;
+      height: 80px;
+      background: var(--beige-warm);
+    }
+
+    .rating-bars { flex: 1; max-width: 320px; }
+    .rating-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .rating-bar-label { font-size: .8rem; color: var(--text-mid); width: 40px; text-align: right; flex-shrink: 0; }
+    .rating-bar-track {
+      flex: 1;
+      height: 8px;
+      background: var(--beige-warm);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .rating-bar-fill {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 4px;
+    }
+    .rating-bar-pct { font-size: .78rem; color: var(--text-light); width: 36px; flex-shrink: 0; }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px; right: 28px;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--beige-warm);
+      line-height: 1;
+    }
+    .review-stars { color: var(--gold); margin-bottom: 16px; letter-spacing: 3px; }
+    .review-text {
+      font-size: .95rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .review-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--beige-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-dark);
+      flex-shrink: 0;
+    }
+    .review-author-info strong {
+      display: block;
+      font-size: .9rem;
+      color: var(--brown);
+    }
+    .review-author-info span {
+      font-size: .78rem;
+      color: var(--text-light);
+    }
+
+    /* ════════════════════════════════════════════
+       CTA BANNER
+    ════════════════════════════════════════════ */
+    .cta-banner {
+      background:
+        linear-gradient(135deg, rgba(61,43,31,.92) 0%, rgba(107,66,38,.88) 100%),
+        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1600&q=80') center/cover;
+      padding: 96px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 300px; height: 300px;
+      border: 60px solid rgba(200,148,58,.08);
+      border-radius: 50%;
+    }
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border: 80px solid rgba(200,148,58,.06);
+      border-radius: 50%;
+    }
+    .cta-banner-inner { position: relative; z-index: 1; }
+    .cta-banner h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .cta-banner h2 span { color: var(--gold-light); font-style: italic; }
+    .cta-banner p { color: rgba(245,236,215,.8); font-size: 1.1rem; margin-bottom: 44px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-banner-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ════════════════════════════════════════════
+       CONTACT & MAP
+    ════════════════════════════════════════════ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-info h2 { font-size: 2.4rem; margin-bottom: 12px; }
+    .contact-info p { color: var(--text-mid); margin-bottom: 36px; }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--beige-warm);
+    }
+    .contact-item:last-of-type { border-bottom: none; }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--beige-warm);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .contact-item-text strong {
+      display: block;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 4px;
+    }
+    .contact-item-text a,
+    .contact-item-text span { color: var(--text-mid); font-size: .95rem; line-height: 1.6; display: block; }
+    .contact-item-text a:hover { color: var(--gold); }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      margin-top: 8px;
+    }
+    .hours-row { display: flex; justify-content: space-between; align-items: center; }
+    .hours-day { font-size: .9rem; color: var(--text-mid); }
+    .hours-time {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brown);
+      white-space: nowrap;
+    }
+    .hours-closed { color: var(--text-light) !important; font-style: italic; }
+
+    .map-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 480px;
+      background: var(--beige-warm);
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ════════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════ */
+    .footer {
+      background: var(--brown);
+      color: var(--beige);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+    .footer-brand .tagline {
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(245,236,215,.5);
+      margin-bottom: 16px;
+    }
+    .footer-brand p {
+      font-size: .88rem;
+      color: rgba(245,236,215,.65);
+      line-height: 1.75;
+      max-width: 280px;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--beige);
+      transition: var(--transition);
+    }
+    .social-link:hover { background: var(--gold); color: var(--white); transform: translateY(-3px); }
+
+    .footer-col h4 {
+      font-family: 'Lato', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a {
+      font-size: .88rem;
+      color: rgba(245,236,215,.6);
+      transition: color var(--transition);
+    }
+    .footer-col a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: .8rem;
+      color: rgba(245,236,215,.4);
+    }
+    .footer-bottom-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-bottom-links a {
+      font-size: .8rem;
+      color: rgba(245,236,215,.4);
+      transition: color var(--transition);
+    }
+    .footer-bottom-links a:hover { color: var(--gold-light); }
+
+    /* ════════════════════════════════════════════
+       ORNAMENTAL DIVIDER
+    ════════════════════════════════════════════ */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 0 auto 40px;
+      max-width: 260px;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold));
+    }
+    .divider::after { background: linear-gradient(to left, transparent, var(--gold)); }
+    .divider-icon { font-size: 1.1rem; color: var(--gold); }
+
+    /* ════════════════════════════════════════════
+       ANIMATIONS
+    ════════════════════════════════════════════ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-up:nth-child(2) { transition-delay: .1s; }
+    .fade-up:nth-child(3) { transition-delay: .2s; }
+    .fade-up:nth-child(4) { transition-delay: .3s; }
+
+    /* ════════════════════════════════════════════
+       BACK TO TOP
+    ════════════════════════════════════════════ */
+    .back-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 48px; height: 48px;
+      background: var(--gold);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 900;
+      border: none;
+    }
+    .back-top.visible { opacity: 1; pointer-events: all; }
+    .back-top:hover { background: var(--gold-dark); transform: translateY(-4px); }
+
+    /* ════════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════════ */
+    @media (max-width: 1100px) {
+      .grid-4, .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item:first-child { grid-column: 1 / 3; grid-row: auto; }
+      .about-text { padding-left: 0; }
+      .about-badge-float { right: 12px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .section { padding: 64px 0; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .trust-items { flex-direction: column; align-items: center; }
+      .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); width: 100%; justify-content: center; }
+      .trust-item:last-child { border-bottom: none; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:first-child { grid-column: 1; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .cta-banner-actions { flex-direction: column; align-items: center; }
+    }
+
+    /* ════════════════════════════════════════════
+       PRINT
+    ════════════════════════════════════════════ */
+    @media print {
+      .navbar, .hero-scroll, .back-top, .mobile-nav { display: none; }
+      .hero { height: auto; min-height: 0; padding: 60px 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<nav class="navbar" id="navbar" aria-label="Navigation principale">
+  <div class="container nav-inner">
+    <a href="#accueil" class="nav-logo" aria-label="Tentation Lusitane – Accueil">
+      <span class="nav-logo-main">Tentation Lusitane</span>
+      <span class="nav-logo-sub">Boulangerie · Pâtisserie Portugaise</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#boulangerie">La Boulangerie</a></li>
+      <li><a href="#specialites">Spécialités</a></li>
+      <li><a href="#produits">Nos Produits</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#contact" class="nav-cta">Nous Trouver</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menu mobile">
+  <button class="mobile-nav-close" id="mobileClose" aria-label="Fermer le menu">✕</button>
+  <a href="#boulangerie" onclick="closeMobileNav()">La Boulangerie</a>
+  <a href="#specialites" onclick="closeMobileNav()">Spécialités</a>
+  <a href="#produits" onclick="closeMobileNav()">Nos Produits</a>
+  <a href="#galerie" onclick="closeMobileNav()">Galerie</a>
+  <a href="#avis" onclick="closeMobileNav()">Avis</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="accueil" aria-label="Bienvenue chez Tentation Lusitane">
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge" aria-label="Boulangerie artisanale à Clamart">
+        <span>🇵🇹</span>
+        Artisanat Portugais · Clamart 92140
+      </div>
+
+      <h1>
+        L'Âme du Portugal<br />
+        au Cœur de<br />
+        <em>Clamart</em>
+      </h1>
+
+      <p class="hero-sub">
+        Pasteis de Nata croustillants, pains au levain, viennoiseries dorées…
+        Chaque matin, notre four vous invite à un voyage artisanal entre France et Portugal.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#specialites" class="btn btn--primary">
+          ✨ Découvrir nos spécialités
+        </a>
+        <a href="#contact" class="btn btn--outline-white">
+          📍 Venir en boutique
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">Défiler</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TRUST BAR
+═══════════════════════════════════════════ -->
+<div class="trust-bar" aria-label="Nos engagements qualité">
+  <div class="container">
+    <ul class="trust-items" role="list">
+      <li class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">🏆</span>
+        <div class="trust-item-text">
+          <strong>Note 4,9/5</strong>
+          <span>312 avis Google</span>
+        </div>
+      </li>
+      <li class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">🌾</span>
+        <div class="trust-item-text">
+          <strong>100% Artisanal</strong>
+          <span>Fait maison chaque jour</span>
+        </div>
+      </li>
+      <li class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">🇵🇹</span>
+        <div class="trust-item-text">
+          <strong>Recettes Authentiques</strong>
+          <span>Traditions portugaises</span>
+        </div>
+      </li>
+      <li class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">⏰</span>
+        <div class="trust-item-text">
+          <strong>Ouvert 7j/7</strong>
+          <span>Dès 7h du matin</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT — LA BOULANGERIE
+═══════════════════════════════════════════ -->
+<section class="section" id="boulangerie" aria-labelledby="boulangerie-title">
+  <div class="container">
+    <div class="grid-2">
+
+      <!-- Image -->
+      <div class="about-image-wrap fade-up">
+        <img
+          class="about-img"
+          src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=85"
+          alt="Intérieur chaleureux de la boulangerie Tentation Lusitane à Clamart"
+          loading="lazy"
+          width="600"
+          height="540"
+        />
+        <div class="about-badge-float" aria-label="Plus de 10 ans d'artisanat">
+          <div class="num">10+</div>
+          <div class="label">Ans d'artisanat</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text fade-up">
+        <span class="eyebrow">Notre histoire</span>
+        <h2 id="boulangerie-title">
+          Une passion née au bord de l'Atlantique
+        </h2>
+
+        <p>
+          Tentation Lusitane est née d'un amour profond pour deux cultures gastronomiques : la richesse
+          de l'artisanat français et la chaleur des saveurs portugaises. Installée au <strong>77 Avenue
+          du Général de Gaulle à Clamart</strong>, notre boulangerie-pâtisserie est devenue un repère
+          gourmand incontournable du 92.
+        </p>
+        <p>
+          Chaque jour, nos artisans boulangers pétrissent, façonnent et cuisent avec soin — du
+          premier lever du soleil jusqu'à la mise en vitrine. Nos <strong>Pasteis de Nata</strong>
+          croustillants, fourrés d'une crème vanillée onctueuse, sont la fierté de la maison.
+          Mais nos pains au levain, nos viennoiseries feuilletées et nos pâtisseries de saison
+          méritent tout autant votre attention.
+        </p>
+
+        <div class="about-features" role="list">
+          <div class="about-feature" role="listitem">
+            <div class="about-feature-icon" aria-hidden="true">🌾</div>
+            <div class="about-feature-text">
+              <strong>Farines sélectionnées</strong>
+              <span>Issues de meuneries artisanales</span>
+            </div>
+          </div>
+          <div class="about-feature" role="listitem">
+            <div class="about-feature-icon" aria-hidden="true">🥚</div>
+            <div class="about-feature-text">
+              <strong>Œufs de plein air</strong>
+              <span>Ingrédients frais et locaux</span>
+            </div>
+          </div>
+          <div class="about-feature" role="listitem">
+            <div class="about-feature-icon" aria-hidden="true">🔥</div>
+            <div class="about-feature-text">
+              <strong>Four à sole traditionnel</strong>
+              <span>Cuisson parfaite à cœur</span>
+            </div>
+          </div>
+          <div class="about-feature" role="listitem">
+            <div class="about-feature-icon" aria-hidden="true">💚</div>
+            <div class="about-feature-text">
+              <strong>Sans additifs</strong>
+              <span>Recettes 100% naturelles</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#specialites" class="btn btn--primary">Voir nos spécialités →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SPECIALTIES PORTUGAISES
+═══════════════════════════════════════════ -->
+<section class="section section--alt" id="specialites" aria-labelledby="spec-title">
+  <div class="container">
+
+    <div class="specialties-header text-center fade-up">
+      <span class="eyebrow">Le meilleur du Portugal</span>
+      <div class="divider" aria-hidden="true"><span class="divider-icon">🌸</span></div>
+      <h2 id="spec-title">
+        Spécialités Portugaises
+      </h2>
+      <p>
+        Des recettes ancestrales transmises de génération en génération, revisitées avec le savoir-faire
+        d'un artisan passionné. Chaque bouchée est un voyage à Lisbonne.
+      </p>
+    </div>
+
+    <div class="grid-3">
+
+      <article class="specialty-card fade-up" aria-label="Pastel de Nata – Spécialité phare">
+        <div class="specialty-card-img">
+          <img
+            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=85"
+            alt="Pasteis de Nata frais de la boulangerie Tentation Lusitane, Clamart"
+            loading="lazy"
+            width="600"
+            height="240"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+        <div class="specialty-card-body">
+          <span class="specialty-card-tag">⭐ Best-seller</span>
+          <h3>Pastel de Nata</h3>
+          <p>
+            La star incontestée ! Pâte feuilletée croustillante, crème à l'œuf vanillée et légèrement
+            caramélisée en surface. Authentique recette de Belém, cuite à haute température pour un
+            résultat incomparable.
+          </p>
+          <div class="specialty-card-footer">
+            <span class="specialty-price">1,80 €</span>
+            <span class="specialty-stars" aria-label="Note 5 étoiles">★★★★★</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="specialty-card fade-up" aria-label="Bolo Rei – Gâteau des rois portugais">
+        <div class="specialty-card-img">
+          <img
+            src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=600&q=85"
+            alt="Bolo Rei, gâteau traditionnel portugais, chez Tentation Lusitane"
+            loading="lazy"
+            width="600"
+            height="240"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+        <div class="specialty-card-body">
+          <span class="specialty-card-tag">🎉 Tradition</span>
+          <h3>Bolo Rei</h3>
+          <p>
+            Le gâteau des rois portugais, moelleux et parfumé, garni de fruits confits et de fruits secs.
+            Une brioche festive aux arômes d'oranges et de cannelle, incontournable des fêtes de fin d'année.
+          </p>
+          <div class="specialty-card-footer">
+            <span class="specialty-price">À partir de 12 €</span>
+            <span class="specialty-stars" aria-label="Note 5 étoiles">★★★★★</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="specialty-card fade-up" aria-label="Pão de Deus – Pain de Dieu portugais">
+        <div class="specialty-card-img">
+          <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=85"
+            alt="Pão de Deus, petit pain à la noix de coco, Tentation Lusitane"
+            loading="lazy"
+            width="600"
+            height="240"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+        <div class="specialty-card-body">
+          <span class="specialty-card-tag">☁️ Douceur</span>
+          <h3>Pão de Deus</h3>
+          <p>
+            Littéralement « pain de Dieu » — une brioche légère et aérée coiffée d'une généreuse
+            couverture à la noix de coco, douce et sucrée. Un nuage de douceur à déguster au petit-déjeuner.
+          </p>
+          <div class="specialty-card-footer">
+            <span class="specialty-price">2,20 €</span>
+            <span class="specialty-stars" aria-label="Note 5 étoiles">★★★★★</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="text-center" style="margin-top: 48px;">
+      <a href="#produits" class="btn btn--outline">Voir tous nos produits →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PRODUITS
+═══════════════════════════════════════════ -->
+<section class="section" id="produits" aria-labelledby="prod-title">
+  <div class="container">
+
+    <div class="text-center fade-up" style="margin-bottom: 48px;">
+      <span class="eyebrow">Notre carte complète</span>
+      <h2 id="prod-title">Nos Produits</h2>
+      <p style="color: var(--text-mid); max-width: 520px; margin: 12px auto 0;">
+        Du pain chaud du matin aux pâtisseries de l'après-midi, une sélection gourmande renouvelée chaque jour.
+      </p>
+    </div>
+
+    <div class="products-tabs" role="tablist" aria-label="Catégories de produits">
+      <button class="tab-btn active" role="tab" aria-selected="true" onclick="filterProducts('all', this)">Tout voir</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="filterProducts('pains', this)">🍞 Pains</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="filterProducts('viennoiseries', this)">🥐 Viennoiseries</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="filterProducts('patisseries', this)">🍮 Pâtisseries</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="filterProducts('snacks', this)">🥪 Snacks</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="filterProducts('boissons', this)">☕ Boissons</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <div class="product-card" data-cat="pains">
+        <div class="product-card-img" aria-hidden="true">🍞</div>
+        <div class="product-card-body">
+          <h4>Pain de Campagne</h4>
+          <p>Mie alvéolée, croûte dorée et croustillante, levain naturel 48h</p>
+          <div class="product-card-price">3,50 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="pains">
+        <div class="product-card-img" aria-hidden="true">🌾</div>
+        <div class="product-card-body">
+          <h4>Baguette Tradition</h4>
+          <p>Façonnée à la main, farine Label Rouge, cuisson sur sole</p>
+          <div class="product-card-price">1,35 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="pains">
+        <div class="product-card-img" aria-hidden="true">🫓</div>
+        <div class="product-card-body">
+          <h4>Pão Alentejano</h4>
+          <p>Pain portugais de l'Alentejo, dense et savoureux, idéal pour les soupes</p>
+          <div class="product-card-price">4,20 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="viennoiseries">
+        <div class="product-card-img" aria-hidden="true">🥐</div>
+        <div class="product-card-body">
+          <h4>Croissant au Beurre</h4>
+          <p>Feuilletage délicat, beurre AOC Charentes-Poitou, croustillant à souhait</p>
+          <div class="product-card-price">1,60 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="viennoiseries">
+        <div class="product-card-img" aria-hidden="true">🍫</div>
+        <div class="product-card-body">
+          <h4>Pain au Chocolat</h4>
+          <p>Deux barres de chocolat noir Valrhona, pâte feuilletée maison</p>
+          <div class="product-card-price">1,80 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="patisseries">
+        <div class="product-card-img" aria-hidden="true">🍮</div>
+        <div class="product-card-body">
+          <h4>Pastel de Nata</h4>
+          <p>Crème à l'œuf vanillée, pâte feuilletée croustillante, recette de Belém</p>
+          <div class="product-card-price">1,80 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="patisseries">
+        <div class="product-card-img" aria-hidden="true">🎂</div>
+        <div class="product-card-body">
+          <h4>Tarte aux Fruits</h4>
+          <p>Pâte sablée, crème pâtissière, fruits de saison frais</p>
+          <div class="product-card-price">4,50 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="snacks">
+        <div class="product-card-img" aria-hidden="true">🥪</div>
+        <div class="product-card-body">
+          <h4>Francesinha</h4>
+          <p>Sandwich chaud typique de Porto, sauce épicée, fromage fondu</p>
+          <div class="product-card-price">7,50 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="snacks">
+        <div class="product-card-img" aria-hidden="true">🫔</div>
+        <div class="product-card-body">
+          <h4>Croquete de Carne</h4>
+          <p>Croquette de bœuf à la portugaise, panée et croustillante (x3)</p>
+          <div class="product-card-price">5,00 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="boissons">
+        <div class="product-card-img" aria-hidden="true">☕</div>
+        <div class="product-card-body">
+          <h4>Bica (Expresso)</h4>
+          <p>L'expresso portugais, intense et velouté — la vraie Bica de Lisbonne</p>
+          <div class="product-card-price">1,40 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="boissons">
+        <div class="product-card-img" aria-hidden="true">🧋</div>
+        <div class="product-card-body">
+          <h4>Galão</h4>
+          <p>Café au lait mousseux à la portugaise, servi dans un grand verre</p>
+          <div class="product-card-price">2,80 €</div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="patisseries">
+        <div class="product-card-img" aria-hidden="true">🍪</div>
+        <div class="product-card-body">
+          <h4>Broas de Mel</h4>
+          <p>Petits gâteaux moelleux au miel et aux épices douces, recette de Madère</p>
+          <div class="product-card-price">2,00 €</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     GALERIE
+═══════════════════════════════════════════ -->
+<section class="section section--alt" id="galerie" aria-labelledby="gal-title">
+  <div class="container">
+
+    <div class="text-center fade-up" style="margin-bottom: 48px;">
+      <span class="eyebrow">Notre univers</span>
+      <h2 id="gal-title">La Galerie</h2>
+      <p style="color: var(--text-mid); max-width: 480px; margin: 12px auto 0;">
+        Un aperçu de notre boutique, de nos créations et de l'ambiance chaleureuse qui vous attend chaque matin.
+      </p>
+    </div>
+
+    <div class="gallery-grid" role="list" aria-label="Photos de la boulangerie">
+
+      <div class="gallery-item fade-up" role="listitem" aria-label="Vue intérieure de la boutique">
+        <div class="gallery-item-bg gal-1">
+          <img
+            src="https://images.unsplash.com/photo-1534432182912-63863115e106?w=800&q=85"
+            alt="Intérieur de Tentation Lusitane – boulangerie artisanale à Clamart"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+      </div>
+
+      <div class="gallery-item fade-up" role="listitem" aria-label="Pasteis de Nata fraîchement cuits">
+        <div class="gallery-item-bg gal-2">
+          <img
+            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=85"
+            alt="Pasteis de Nata frais du four, spécialité portugaise à Clamart"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+      </div>
+
+      <div class="gallery-item fade-up" role="listitem" aria-label="Notre sélection de pains artisanaux">
+        <div class="gallery-item-bg gal-3">
+          <img
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=85"
+            alt="Sélection de pains artisanaux chez Tentation Lusitane"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+      </div>
+
+      <div class="gallery-item fade-up" role="listitem" aria-label="Viennoiseries et pâtisseries du matin">
+        <div class="gallery-item-bg gal-4">
+          <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=85"
+            alt="Croissants et viennoiseries artisanales Tentation Lusitane Clamart"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+      </div>
+
+      <div class="gallery-item fade-up" role="listitem" aria-label="Décoration et ambiance portugaise">
+        <div class="gallery-item-bg gal-5">
+          <img
+            src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=600&q=85"
+            alt="Ambiance chaleureuse et décoration portugaise, Tentation Lusitane"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CTA BANNER
+═══════════════════════════════════════════ -->
+<div class="cta-banner" aria-label="Invitation à venir en boutique">
+  <div class="container cta-banner-inner">
+    <span class="eyebrow" style="color: var(--gold-light);">Une envie irrésistible ?</span>
+    <h2>Venez <span>goûter la différence</span><br />à Clamart</h2>
+    <p>
+      Nos artisans déposent les premières fournées dès 7h. Pasteis chauds, café parfumé,
+      et un accueil qui donne le sourire — c'est ça, Tentation Lusitane.
+    </p>
+    <div class="cta-banner-actions">
+      <a href="#contact" class="btn btn--primary">📍 Trouver la boutique</a>
+      <a href="tel:+33XXXXXXXXX" class="btn btn--outline-white">📞 Nous appeler</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     AVIS CLIENTS
+═══════════════════════════════════════════ -->
+<section class="section" id="avis" aria-labelledby="avis-title">
+  <div class="container">
+
+    <div class="text-center fade-up" style="margin-bottom: 48px;">
+      <span class="eyebrow">Ce qu'ils disent</span>
+      <h2 id="avis-title">Avis de nos Clients</h2>
+      <p style="color: var(--text-mid); max-width: 480px; margin: 12px auto 0;">
+        Leur satisfaction est notre plus belle récompense. Voici ce que nos fidèles clients partagent.
+      </p>
+    </div>
+
+    <!-- Rating overview -->
+    <div class="reviews-rating-block fade-up">
+      <div class="rating-big" aria-label="Note globale 4,9 sur 5">
+        <div class="number">4,9</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="count">Basé sur 312 avis Google</div>
+      </div>
+
+      <div class="rating-divider" aria-hidden="true"></div>
+
+      <div class="rating-bars" aria-label="Répartition des notes">
+        <div class="rating-bar-row" aria-label="5 étoiles : 91%">
+          <span class="rating-bar-label">5 ★</span>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width:91%"></div></div>
+          <span class="rating-bar-pct">91%</span>
+        </div>
+        <div class="rating-bar-row" aria-label="4 étoiles : 7%">
+          <span class="rating-bar-label">4 ★</span>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width:7%"></div></div>
+          <span class="rating-bar-pct">7%</span>
+        </div>
+        <div class="rating-bar-row" aria-label="3 étoiles : 1%">
+          <span class="rating-bar-label">3 ★</span>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width:1%"></div></div>
+          <span class="rating-bar-pct">1%</span>
+        </div>
+        <div class="rating-bar-row" aria-label="2 étoiles : 1%">
+          <span class="rating-bar-label">2 ★</span>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width:1%"></div></div>
+          <span class="rating-bar-pct">1%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review cards -->
+    <div class="reviews-grid">
+
+      <article class="review-card fade-up">
+        <div class="review-stars" aria-label="5 étoiles">★★★★★</div>
+        <p class="review-text">
+          « Les meilleurs Pasteis de Nata que j'ai mangés hors du Portugal, sans hésitation.
+          La pâte est incroyablement feuilletée et la crème est parfaite. Je fais 20 km
+          exprès pour en prendre chaque week-end ! »
+        </p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">ML</div>
+          <div class="review-author-info">
+            <strong>Marie-Laure D.</strong>
+            <span>Clamart · Google · Il y a 2 semaines</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card fade-up">
+        <div class="review-stars" aria-label="5 étoiles">★★★★★</div>
+        <p class="review-text">
+          « Une vraie pépite de quartier. L'accueil est chaleureux, les produits sont
+          d'une fraîcheur irréprochable. Le pain de campagne au levain est une merveille.
+          On ne change pas une équipe qui gagne ! »
+        </p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">TB</div>
+          <div class="review-author-info">
+            <strong>Thomas B.</strong>
+            <span>Châtenay-Malabry · Google · Il y a 1 mois</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card fade-up">
+        <div class="review-stars" aria-label="5 étoiles">★★★★★</div>
+        <p class="review-text">
+          « J'emmène toujours des Pasteis de Nata quand j'invite des amis. Tout le monde
+          est époustouflé. La Francesinha du midi est également délicieuse. Un endroit
+          qui sent bon le fait-maison et l'authenticité. »
+        </p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">SD</div>
+          <div class="review-author-info">
+            <strong>Sophie D.</strong>
+            <span>Vanves · Google · Il y a 3 semaines</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="text-center" style="margin-top: 40px;">
+      <a
+        href="https://www.google.com/search?q=Tentation+Lusitane+Clamart+avis"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn--outline"
+        aria-label="Voir tous les avis Google (nouvel onglet)"
+      >
+        Voir tous les avis Google →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT & HORAIRES
+═══════════════════════════════════════════ -->
+<section class="section section--alt" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+
+    <div class="text-center fade-up" style="margin-bottom: 64px;">
+      <span class="eyebrow">Venir nous voir</span>
+      <h2 id="contact-title">Contact & Accès</h2>
+      <p style="color: var(--text-mid); max-width: 480px; margin: 12px auto 0;">
+        Nous sommes ouverts 7 jours sur 7 pour vous accueillir dans notre boulangerie au cœur de Clamart.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="fade-up">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">📍</div>
+          <div class="contact-item-text">
+            <strong>Adresse</strong>
+            <a
+              href="https://maps.google.com/?q=77+Avenue+du+General+de+Gaulle+Clamart+92140"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ouvrir l'adresse dans Google Maps (nouvel onglet)"
+            >
+              77 Avenue du Général de Gaulle<br />
+              92140 Clamart, Île-de-France
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">📞</div>
+          <div class="contact-item-text">
+            <strong>Téléphone</strong>
+            <a href="tel:+33XXXXXXXXX">01 XX XX XX XX</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">📱</div>
+          <div class="contact-item-text">
+            <strong>Réseaux Sociaux</strong>
+            <span>
+              Suivez-nous sur
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: var(--gold); font-weight:700;">Instagram</a>
+              &amp;
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="color: var(--gold); font-weight:700;">Facebook</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">🚇</div>
+          <div class="contact-item-text">
+            <strong>Accès Transports</strong>
+            <span>
+              RER B : Clamart (5 min à pied)<br />
+              Bus : Lignes 294, 289, 191<br />
+              Parking à proximité
+            </span>
+          </div>
+        </div>
+
+        <div class="contact-item" style="border-bottom: none;">
+          <div class="contact-icon" aria-hidden="true">⏰</div>
+          <div class="contact-item-text">
+            <strong>Horaires d'ouverture</strong>
+            <div class="hours-grid" style="margin-top: 12px;">
+              <div class="hours-row"><span class="hours-day">Lun – Ven</span><span class="hours-time">7h00 – 20h00</span></div>
+              <div class="hours-row"><span class="hours-day">Samedi</span><span class="hours-time">7h00 – 20h30</span></div>
+              <div class="hours-row"><span class="hours-day">Dimanche</span><span class="hours-time">7h30 – 13h30</span></div>
+              <div class="hours-row"><span class="hours-day">Jours fériés</span><span class="hours-time hours-closed">Vérifier en boutique</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-wrap fade-up" aria-label="Carte Google Maps – Tentation Lusitane à Clamart">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.123!2d2.2632!3d48.7997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s77+Avenue+du+G%C3%A9n%C3%A9ral+de+Gaulle%2C+92140+Clamart!5e0!3m2!1sfr!2sfr!4v1680000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation de Tentation Lusitane – 77 Avenue du Général de Gaulle, Clamart 92140"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="logo-text">Tentation Lusitane</div>
+        <div class="tagline">Boulangerie · Pâtisserie Portugaise</div>
+        <p>
+          L'art de la boulangerie française rencontre les saveurs ancestrales du Portugal.
+          Chaque produit est fait avec amour et savoir-faire, pour votre plaisir gourmand à Clamart.
+        </p>
+        <div class="footer-social" aria-label="Réseaux sociaux">
+          <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram Tentation Lusitane">
+            📸
+          </a>
+          <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook Tentation Lusitane">
+            📘
+          </a>
+          <a
+            href="https://www.google.com/search?q=Tentation+Lusitane+Clamart"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Nos avis Google"
+          >
+            ⭐
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Navigation rapide">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#boulangerie">La Boulangerie</a></li>
+          <li><a href="#specialites">Spécialités Portugaises</a></li>
+          <li><a href="#produits">Nos Produits</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#avis">Avis Clients</a></li>
+          <li><a href="#contact">Contact & Accès</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Nos Spécialités</h4>
+        <ul>
+          <li><a href="#specialites">Pasteis de Nata</a></li>
+          <li><a href="#specialites">Bolo Rei</a></li>
+          <li><a href="#specialites">Pão de Deus</a></li>
+          <li><a href="#produits">Pains Artisanaux</a></li>
+          <li><a href="#produits">Viennoiseries</a></li>
+          <li><a href="#produits">Snacks Portugais</a></li>
+          <li><a href="#produits">Café & Boissons</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <address style="font-style:normal;">
+          <ul>
+            <li style="margin-bottom: 10px; font-size: .88rem; color: rgba(245,236,215,.6);">
+              77 Av. du Général de Gaulle<br />
+              92140 Clamart
+            </li>
+            <li style="margin-bottom: 10px; font-size: .88rem; color: rgba(245,236,215,.6);">
+              <a href="tel:+33XXXXXXXXX">01 XX XX XX XX</a>
+            </li>
+            <li style="font-size: .82rem; color: rgba(245,236,215,.5);">
+              Lun–Ven : 7h–20h<br />
+              Samedi : 7h–20h30<br />
+              Dimanche : 7h30–13h30
+            </li>
+          </ul>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Tentation Lusitane · Boulangerie-Pâtisserie Artisanale · Clamart 92140 · Tous droits réservés</p>
+      <nav class="footer-bottom-links" aria-label="Liens légaux">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">CGU</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button
+  class="back-top"
+  id="backTop"
+  onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  aria-label="Retour en haut de page"
+>
+  ↑
+</button>
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script>
+  /* ── Navbar scroll effect ── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 80);
+    document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  /* ── Mobile nav ── */
+  const hamburger  = document.getElementById('hamburger');
+  const mobileNav  = document.getElementById('mobileNav');
+  const mobileClose = document.getElementById('mobileClose');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  mobileClose.addEventListener('click', closeMobileNav);
+  mobileNav.addEventListener('click', e => { if (e.target === mobileNav) closeMobileNav(); });
+
+  /* ── Product tabs filter ── */
+  function filterProducts(cat, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      const show = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = show ? '' : 'none';
+    });
+  }
+
+  /* ── Intersection Observer (fade-up animations) ── */
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  fadeEls.forEach(el => observer.observe(el));
+
+  /* ── Smooth anchor links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
