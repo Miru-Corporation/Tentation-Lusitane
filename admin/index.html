@@ -147,12 +147,14 @@
       position: fixed; z-index: 9999;
       background: var(--white); border: 1.5px solid var(--beige-warm); border-radius: 12px;
       box-shadow: var(--shadow-md); padding: 10px; display: none;
-      grid-template-columns: repeat(8, 1fr); gap: 4px; width: 292px;
+      grid-template-columns: repeat(7, 1fr); gap: 2px; width: 280px;
+      overflow: hidden;
     }
     .emoji-picker-grid.open { display: grid; }
     .emoji-picker-grid button {
-      font-size: 1.25rem; background: none; border: none; border-radius: 6px;
-      padding: 5px; cursor: pointer; transition: background var(--tr); line-height: 1;
+      font-size: 1.2rem; background: none; border: none; border-radius: 6px;
+      padding: 4px 2px; cursor: pointer; transition: background var(--tr); line-height: 1;
+      width: 100%; min-width: 0; text-align: center;
     }
     .emoji-picker-grid button:hover { background: var(--beige-warm); }
     .emoji-picker-section { grid-column: 1 / -1; font-size: .65rem; font-weight: 700;
@@ -759,7 +761,7 @@ function createEmojiPicker(initial) {
       if (g !== grid) g.classList.remove('open');
     });
     const rect        = trigger.getBoundingClientRect();
-    const pickerW     = 292;
+    const pickerW     = 280;
     const leftIdeal   = rect.left;
     const leftClamped = Math.min(leftIdeal, window.innerWidth - pickerW - 8);
     grid.style.top  = (rect.bottom + 4) + 'px';
