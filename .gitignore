@@ -1,0 +1,10 @@
+.env
+node_modules/
+assets/img/galerie/*.jpg
+assets/img/galerie/*.jpeg
+assets/img/galerie/*.png
+assets/img/galerie/*.webp
+assets/img/specialites/*.jpg
+assets/img/specialites/*.jpeg
+assets/img/specialites/*.png
+assets/img/specialites/*.webp

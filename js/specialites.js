@@ -1,0 +1,73 @@
+(function () {
+  'use strict';
+
+  const FALLBACK = [
+    {
+      id: 1, order: 1,
+      src: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=85',
+      alt: 'Pasteis de Nata frais de la boulangerie Tentation Lusitane, Clamart',
+      tag: '⭐ Best-seller', name: 'Pastel de Nata',
+      description: 'La star incontestée ! Pâte feuilletée croustillante, crème à l\'œuf vanillée et légèrement caramélisée en surface. Authentique recette de Belém, cuite à haute température pour un résultat incomparable.',
+      price: '1,80 €', ariaLabel: 'Pastel de Nata – Spécialité phare'
+    },
+    {
+      id: 2, order: 2,
+      src: 'https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=600&q=85',
+      alt: 'Bolo Rei, gâteau traditionnel portugais, chez Tentation Lusitane',
+      tag: '🎉 Tradition', name: 'Bolo Rei',
+      description: 'Le gâteau des rois portugais, moelleux et parfumé, garni de fruits confits et de fruits secs. Une brioche festive aux arômes d\'oranges et de cannelle, incontournable des fêtes de fin d\'année.',
+      price: 'À partir de 12 €', ariaLabel: 'Bolo Rei – Gâteau des rois portugais'
+    },
+    {
+      id: 3, order: 3,
+      src: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=85',
+      alt: 'Pão de Deus, petit pain à la noix de coco, Tentation Lusitane',
+      tag: '☁️ Douceur', name: 'Pão de Deus',
+      description: 'Littéralement « pain de Dieu » — une brioche légère et aérée coiffée d\'une généreuse couverture à la noix de coco, douce et sucrée. Un nuage de douceur à déguster au petit-déjeuner.',
+      price: '2,20 €', ariaLabel: 'Pão de Deus – Pain de Dieu portugais'
+    }
+  ];
+
+  function esc(str) {
+    return String(str)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function renderSpecialites(items) {
+    const grid = document.getElementById('specialitesGrid');
+    if (!grid) return;
+
+    const sorted = [...items].sort((a, b) => a.order - b.order);
+    grid.innerHTML = sorted.map(item => `
+      <article class="specialty-card fade-up" aria-label="${esc(item.ariaLabel)}">
+        <div class="specialty-card-img">
+          <img
+            src="${esc(item.src)}"
+            alt="${esc(item.alt)}"
+            loading="lazy"
+            width="600" height="240"
+            style="width:100%;height:100%;object-fit:cover;"
+          />
+        </div>
+        <div class="specialty-card-body">
+          <span class="specialty-card-tag">${esc(item.tag)}</span>
+          <h3>${esc(item.name)}</h3>
+          <p>${esc(item.description)}</p>
+          <div class="specialty-card-footer">
+            <span class="specialty-price">${esc(item.price)}</span>
+            <span class="specialty-stars" aria-label="Note 5 étoiles">★★★★★</span>
+          </div>
+        </div>
+      </article>`).join('');
+
+    if (window.fadeObserver) {
+      grid.querySelectorAll('.fade-up').forEach(el => window.fadeObserver.observe(el));
+    }
+  }
+
+  fetch('/api/specialites')
+    .then(r => r.ok ? r.json() : Promise.reject(new Error('fetch')))
+    .then(data => renderSpecialites(Array.isArray(data.items) ? data.items : FALLBACK))
+    .catch(() => renderSpecialites(FALLBACK));
+})();

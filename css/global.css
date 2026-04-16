@@ -1,0 +1,82 @@
+/* ════════════════════════════════════════════
+   DESIGN TOKENS
+════════════════════════════════════════════ */
+:root {
+  --gold:        #C8943A;
+  --gold-light:  #E8C47A;
+  --gold-dark:   #8B6220;
+  --brown:       #3D2B1F;
+  --brown-mid:   #6B4226;
+  --beige:       #F5ECD7;
+  --beige-warm:  #EFE0C0;
+  --cream:       #FDFAF4;
+  --white:       #FFFFFF;
+  --text-dark:   #2C1810;
+  --text-mid:    #5A3E2B;
+  --text-light:  #8C7B6B;
+  --shadow-sm:   0 2px 12px rgba(61,43,31,.10);
+  --shadow-md:   0 8px 32px rgba(61,43,31,.16);
+  --shadow-lg:   0 20px 60px rgba(61,43,31,.20);
+  --radius:      12px;
+  --radius-lg:   24px;
+  --transition:  .35s cubic-bezier(.4,0,.2,1);
+}
+
+/* ════════════════════════════════════════════
+   RESET & BASE
+════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a  { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ════════════════════════════════════════════
+   TYPOGRAPHY HELPERS
+════════════════════════════════════════════ */
+.font-serif { font-family: 'Playfair Display', serif; }
+.text-gold   { color: var(--gold); }
+.text-center { text-align: center; }
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.25;
+  color: var(--brown);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .75rem;
+}
+
+/* ════════════════════════════════════════════
+   LAYOUT
+════════════════════════════════════════════ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section { padding: 96px 0; }
+.section--alt { background: var(--beige); }
+.section--dark {
+  background: var(--brown);
+  color: var(--beige);
+}
+.section--dark h2, .section--dark h3 { color: var(--gold-light); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
