@@ -1,9 +1,21 @@
-/* ── Navbar scroll effect ── */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 80);
-  document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
-}, { passive: true });
+/* ── Navbar scroll + Hero parallax ── */
+const navbar  = document.getElementById('navbar');
+const heroBg  = document.querySelector('.hero-bg');
+const heroH   = () => window.innerHeight; // hauteur du hero (~100vh)
+let   rafId   = null;
+
+function onScroll() {
+  const s = window.scrollY;
+  navbar.classList.toggle('scrolled', s > 80);
+  document.getElementById('backTop').classList.toggle('visible', s > 400);
+  if (heroBg && s <= heroH()) {
+    if (!rafId) rafId = requestAnimationFrame(() => {
+      heroBg.style.transform = `translateY(${s * 0.25}px)`;
+      rafId = null;
+    });
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
 
 /* ── Mobile nav ── */
 const hamburger   = document.getElementById('hamburger');
