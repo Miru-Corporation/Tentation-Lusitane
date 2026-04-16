@@ -758,9 +758,12 @@ function createEmojiPicker(initial) {
     document.querySelectorAll('.emoji-picker-grid.open').forEach(g => {
       if (g !== grid) g.classList.remove('open');
     });
-    const rect = trigger.getBoundingClientRect();
+    const rect        = trigger.getBoundingClientRect();
+    const pickerW     = 292;
+    const leftIdeal   = rect.left;
+    const leftClamped = Math.min(leftIdeal, window.innerWidth - pickerW - 8);
     grid.style.top  = (rect.bottom + 4) + 'px';
-    grid.style.left = rect.left + 'px';
+    grid.style.left = Math.max(8, leftClamped) + 'px';
     grid.classList.toggle('open');
   });
 
