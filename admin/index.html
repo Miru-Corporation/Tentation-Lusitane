@@ -436,6 +436,7 @@ let galerieItems = [];
 async function loadGalerie() {
   const res  = await fetch('/api/admin/gallery');
   if (res.status === 401) { showScreen(true); return; }
+  if (!res.ok) throw new Error('Erreur serveur ' + res.status);
   const data = await res.json();
   galerieItems = [...data.items].sort((a,b) => a.order - b.order);
   renderGalerieCards();

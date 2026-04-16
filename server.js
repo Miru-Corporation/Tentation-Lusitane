@@ -86,6 +86,8 @@ function recordFail(ip) {
 function resetAttempts(ip) { loginAttempts.delete(ip); }
 
 // ── Middleware global ─────────────────────────────────────────────────────────
+app.set('trust proxy', 1); // Render / reverse-proxy HTTPS
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -95,8 +97,8 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
-    sameSite: 'strict',
-    secure: false,
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
     maxAge: 8 * 60 * 60 * 1000
   }
 }));
